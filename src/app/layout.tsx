@@ -1,8 +1,9 @@
+import Provider from "@/components/providers/Provider";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Provider from "@/components/providers/Provider";
-import { cn } from "@/lib/utils";
+import Navbar from "@/components/header/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={cn("bg-background text-primary", inter.className)}>
         <Provider>
+          <Navbar />
           <div className="w-full h-full px-4">{children}</div>
         </Provider>
       </body>

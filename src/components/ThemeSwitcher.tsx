@@ -45,9 +45,11 @@ export default function ThemeSwitcher() {
     const storedMode = localStorage.getItem("mode");
     if (storedMode) {
       setMode(storedMode);
-    } else {
-      localStorage.setItem("mode", mode);
     }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("mode", mode);
   }, [mode]);
 
   const handleModeChange = (newMode: "light" | "dark") => {
@@ -79,7 +81,7 @@ export default function ThemeSwitcher() {
   return (
     <div className="relative">
       <button onClick={() => setDropdown(!dropdown)}>
-        <Paintbrush className="w-20 h-20 text-accent" />
+        <Paintbrush className="text-accent w-7 h-7" />
       </button>
 
       {dropdown && (
