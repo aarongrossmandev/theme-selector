@@ -88,7 +88,7 @@ export default function ThemeSwitcher() {
         <div
           ref={dropdownRef}
           className={cn(
-            "absolute transition-all z-[60] top-auto right-0 w-[350px] bg-secondary border border-accent p-3 rounded-md overflow-hidden"
+            "absolute transition-all z-[60] top-auto right- w-[350px] bg-secondary border border-accent p-3 rounded-md overflow-hidden"
           )}
         >
           <div className="flex flex-col space-y-3">

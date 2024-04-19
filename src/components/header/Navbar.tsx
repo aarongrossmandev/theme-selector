@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
-import ThemeSwitcher from "../ThemeSwitcher";
+import ThemeSwitch from "../ThemeSwitch";
 import MenuImage from "./MenuImage";
 import MobileNav from "./MobileNav";
 import NavLink from "./NavLink";
@@ -44,7 +44,7 @@ export default function Navbar() {
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 w-full border-accent bg-background backdrop-blur supports-[backdrop-filter]:bg-background-transparent transition-all px-3",
+        "sticky top-0 z-50 w-full border-accent bg-background backdrop-blur supports-[backdrop-filter]:bg-background-transparent transition-all px-3",
         isScrolled && "shadow-sm shadow-accent"
       )}
     >
@@ -97,7 +97,7 @@ export default function Navbar() {
           </nav>
         </div>
         <div className="flex items-center gap-x-4">
-          <ThemeSwitcher />
+          <ThemeSwitch />
           <div className="aspect-square h-10 rounded-full overflow-hidden relative">
             <Image
               src="/witch.jpg"

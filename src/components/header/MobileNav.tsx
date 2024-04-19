@@ -9,7 +9,7 @@ import React, { MouseEvent, useEffect, useState } from "react";
 
 export default function MobileNav() {
   const pathname = usePathname();
-  const [menuOpen, setMenuOpen] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const [openedMenu, setOpenedMenu] = useState<number | null>(null);
 
   function handleClick(index: number, e: MouseEvent) {
