@@ -11,15 +11,17 @@ import React from "react";
 
 export default function AboutPage() {
   return (
-    <DropdownProvider>
-      <DropdownTrigger>Open</DropdownTrigger>
-      <DropdownContent>
-        <DropdownHeader>Testing</DropdownHeader>
-        <DropdownLabel>First Test</DropdownLabel>
-        <DropdownItem className="block">
-          this is another display of the dropdown
-        </DropdownItem>
-      </DropdownContent>
-    </DropdownProvider>
+    <div className="w-fit">
+      <DropdownProvider>
+        <DropdownTrigger>Open</DropdownTrigger>
+        <DropdownContent side="left">
+          <DropdownHeader>Testing</DropdownHeader>
+          <DropdownLabel>First Test</DropdownLabel>
+          <DropdownItem className="block">
+            this is another display of the dropdown
+          </DropdownItem>
+        </DropdownContent>
+      </DropdownProvider>
+    </div>
   );
 }
